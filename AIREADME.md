@@ -56,6 +56,12 @@ Use [PLAN.md](PLAN.md) for delivery progress and [docs/requirements.md](docs/req
 
 As of 20 October 2026, this setup contains the assignment guide, local skills, planning documents, and templates. No dataset, dimensional model, SQL implementation, ETL pipeline, or Fabric run has been completed. Fabric access and executable project commands have not been configured or verified. This is a dated setup snapshot; PLAN.md holds subsequent progress.
 
+## GitHub version control
+
+The project remote is [HenriqueReduto/BI-Project](https://github.com/HenriqueReduto/BI-Project), using the `main` branch. Raw CSV, gzip, and GeoJSON files use Git LFS; install Git LFS before cloning and run `git lfs pull` if a checkout contains pointer files. Raw inputs remain intact locally. `.gitignore` excludes local environments, caches, credentials, and temporary files.
+
+The initial local commit is preserved on `backup/pre-lfs-2026-10-20`; this backup branch is local only and should not be pushed because it contains large ordinary Git blobs. Publication results are recorded in `validation/github-publication.md`. GitHub version control does not constitute an assignment submission or Fabric deployment.
+
 ## How to start the next session
 
 Open this BI Project folder as the working project and ask, for example:

@@ -42,6 +42,8 @@ Due at 23:59 on the last Saturday before the BI I first-call exam. Confirm the e
 Evidence: execution logs, reconciliations, DQ LOG results, screenshots/diagrams, final report and access checklist.
 
 ## Checkpoints and exclusions
+GitHub publication requested on 20 October 2026: prepare Git LFS for raw data, preserve the initial local commit on a backup branch, publish `main` to `HenriqueReduto/BI-Project`, and verify the remote commit and LFS objects. Execution evidence: `validation/github-publication.md`.
+
 Confirm dataset/business decisions before implementing a model. Resolve lab-specific conventions before asserting compliance. Keep external services out of submitted ETL. Do not submit, share, provision paid resources, or delete Fabric objects without applicable authorization.
 
 ## Active local data exploration
