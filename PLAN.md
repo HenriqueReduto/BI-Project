@@ -7,13 +7,15 @@ Design, implement, validate, and explain a Microsoft Fabric star-schema warehous
 - [x] Save the assignment guide and initialize the local operating structure.
 - [x] Record requirements, deadlines, open questions, and report structure.
 - [x] Add AIREADME.md explaining the project-specific agent workflow.
-- [x] Add scripts/extract_csv_gz.py and extract the three supplied gzip CSVs into data/raw with distinct .extracted.csv names, preserving originals.
-- [ ] Identify group, business scenario, source dataset, and Fabric workspace.
-No dataset, model, SQL implementation, ETL pipeline, or Fabric execution is complete.
+- [x] Historical setup: add the gzip extraction utility for the former source; it is not needed for the current shelter CSVs.
+- [x] Select Austin Animal Center historical intakes/outcomes as the active source (user instruction, 26 October 2026).
+- [x] Record preliminary full-file shelter profiling and proposed business/model design.
+- [ ] Confirm group, final business questions, Fabric workspace, and report language.
+The source is selected and a model is proposed. SQL implementation, ETL pipelines, and Fabric execution remain incomplete.
 
 ## Delivery 1 — 1 November 2026, 23:59 (guide p.9)
 - [ ] Confirm group of 1–4 students and required identification/naming.
-- [ ] Select eligible source data; preserve provenance and usage terms.
+- [x] Select shelter source files and record official provenance/usage terms; teacher acceptance and original download date remain pending.
 - [ ] Profile rows, dates, attributes, measures, cleansing needs, and candidate hierarchies.
 - [ ] Define organization/problem and explained business needs/questions.
 - [ ] Ingest source data into Fabric Lakehouse; sample where necessary.
@@ -46,12 +48,14 @@ GitHub publication completed on 20 October 2026: `main` published to `HenriqueRe
 
 Confirm dataset/business decisions before implementing a model. Resolve lab-specific conventions before asserting compliance. Keep external services out of submitted ETL. Do not submit, share, provision paid resources, or delete Fabric objects without applicable authorization.
 
-## Active local data exploration
-- [x] Inspect raw schemas and source documentation; preserve raw inputs.
-- [x] Profile all fields and full row populations; verify keys, date coverage, and raw hashes.
-- [x] Save reproducible code and a concise readiness report; record limitations and next decisions.
+## Active animal shelter work - 26 October 2026
+- [x] Replace active Airbnb references with the selected historical Austin Animal Center datasets.
+- [x] Inspect both complete CSVs for counts, IDs, duplicates, missingness, and event date coverage.
+- [x] Record a proposed business brief and model/ETL approach, with unresolved requirements explicit.
+- [ ] Implement reproducible shelter-specific profiling; existing Airbnb analysis tooling remains unvalidated for this source.
+- [ ] Test encounter matching, timestamp semantics, and ambiguous/unmatched event handling.
+- [ ] Confirm two distinct primitive measures and five defensible hierarchies with teacher guidance.
+- [ ] Select a linked multi-year cohort with each source extract at most 30,000 rows; validate follow-up coverage.
+- [ ] Finalize business questions and schema, then prepare Delivery 1 Lakehouse sources and chapters 1-2.
 
-Local EDA evidence: outputs/raw-data-analysis/report.md and profile.json. Seven logical files / 128 fields were profiled; gzip payloads matched extracted files and raw hashes were unchanged. Candidate source is Inside Airbnb Lisbon-region data; final business scenario, fact grain, primitive measures, hierarchy design, linked sampling, and teacher acceptance remain pending. No Fabric implementation is asserted.
-
-Local EDA evidence: outputs/raw-data-analysis/report.md and profile.json. Seven logical files / 128 fields were profiled; gzip payloads matched extracted files and raw hashes were unchanged. Candidate source is Inside Airbnb Lisbon-region data; final business scenario, fact grain, primitive measures, hierarchy design, linked sampling, and teacher acceptance remain pending. No Fabric implementation is asserted.
-
+Current evidence: docs/raw-data-analysis.md, validation/animal-shelter-analysis.md, and validation/animal-shelter-profile.json. Historical Airbnb validation is retained under validation/raw-data-analysis.md and does not validate the shelter source. No current Fabric implementation is asserted.

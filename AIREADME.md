@@ -70,12 +70,10 @@ Open this BI Project folder as the working project and ask, for example:
 
 Supply the dataset or its location when making that request. For later work, name the next outcome you want, such as reviewing a star schema or validating an ETL run. The agent maintains this explanation when the project's operating setup materially changes.
 
-## Extracting compressed source files
+## Active dataset and exploration
 
-Run `python scripts/extract_csv_gz.py` from this project folder. The script uses Python's standard library to stream each `data/raw/*.csv.gz` file into `data/raw/<name>.extracted.csv`. It preserves compressed originals and existing CSVs, skips an extracted output if it already exists, and removes its partial output if extraction fails. A skipped file is not revalidated; if interrupted by a forced process stop, check for incomplete output before rerunning.
+The active source is Austin Animal Center historical intakes and outcomes, selected on 26 October 2026. The working folder is `D:\IMS\BI Project`; data/raw contains the two original shelter CSVs. See [project brief](docs/project-brief.md) for business questions and provenance, [analysis](docs/raw-data-analysis.md) for verified findings, and [model and ETL](docs/model-and-etl.md) for the proposed design.
 
-The `.extracted.csv` naming distinguishes these files from the existing `listings.csv` and `reviews.csv`. This is lossless decompression only: it does not clean, sample, or load data into Fabric. Extraction completed on 20 October 2026 for calendar, listings, and reviews. Dataset selection and profiling still require separate work.
+The earlier Airbnb exploration and gzip extraction describe previous work. Existing scripts/profile_raw_data.py has not been validated for shelter data; its previous reports and checks are not evidence for the selected source. Current evidence is in validation/animal-shelter-analysis.md and validation/animal-shelter-profile.json. Historical raw-data-analysis output links may be unavailable in this checkout.
 
-## Raw-data exploration
-Use scripts/profile_raw_data.py to profile all raw CSVs and GeoJSON features without changing the inputs. Setup and methods are documented in [docs/raw-data-analysis.md](docs/raw-data-analysis.md). Results are saved in outputs/raw-data-analysis/; inspect report.html for the searchable field explorer and report.md for the BI readiness assessment. This local Python analysis does not replace Fabric ETL or teacher validation.
-
+Next work is to test encounter matching, settle measures and hierarchies, and prepare linked source extracts within the assignment limits. Local Python exploration does not replace Fabric ETL or teacher validation. Final business questions, group details, report language, and Fabric access remain pending.

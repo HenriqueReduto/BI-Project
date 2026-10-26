@@ -1,3 +1,5 @@
+> HISTORICAL / SUPERSEDED: the following 20 October 2026 checks describe the former Airbnb source. They do not validate the shelter CSVs. Refer to animal-shelter-analysis.md and animal-shelter-profile.json for current evidence. The old linked output files are absent from this checkout.
+
 # Local EDA verification — 20 October 2026
 
 - PASS: seven logical files, 128 fields, all rows processed.
